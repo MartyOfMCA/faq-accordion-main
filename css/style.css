@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(300, 9%, 87%);
+    height: 100svh;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2 {
+    color: hsl(292, 42%, 14%);
+}
+
+.banner {
+    min-height: 10rem;
+    background-image: url('../assets/images/background-pattern-mobile.svg');
+    background-repeat: repeat-x;
+}
+
+.main {
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: hsl(0, 0%, 100%);
+    width: 90%;
+    max-width: 32rem;
+    padding: 1.2em;
+    border-radius: .4em;
+}
+
+.section-title {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.faqs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid hsl(0, 9%, 94%);
+}
+
+.faq:last-child {
+    border-bottom: none;
+}
+
+.faq__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq__header__title {
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 80%;
+}
+
+.faq__header__title:hover {
+    color: #AD28EB;
+}
+
+.faq__header__action {
+    position: relative;
+    width: 10%;
+}
+
+.faq__content.hide {
+    display: none;
+}
+
+.plus,
+.minus {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.plus.hide {
+    opacity: 0;
+}
+
+.minus.hide {
+    opacity: 0;
+}
+
+.footer {
+    margin-top: auto;
+}
+
+@media (min-width: 460px) {
+    .banner {
+        min-height: 15rem;
+        background-image: url('../images/background-pattern-desktop.svg');
+        background-repeat: repeat-x;
+    }
+
+    .main {
+        top: 10rem;
+    }
+}
